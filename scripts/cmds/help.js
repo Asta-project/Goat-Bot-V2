@@ -102,15 +102,15 @@ module.exports = {
 		en: {
 			help: "╭──────────────✎"
 				+ "\n%1"
-				+ "\n├─────⭔"
+				+ "\n├─────"
 				+ "\n│ Page [ %2/%3 ]"
 				+ "\n│ Currently, the bot has %4 commands that can be used"
 				+ "\n│ » Type %5help <page> to view the command list"
 				+ "\n│ » Type %5help to view the details of how to use that command"
-				+ "\n├────────⭔"
+				+ "\n├────────;"
 				+ "\n│ %6"
 				+ "\n╰─────────────✎",
-			help2: "%1├───────⭔"
+			help2: "%1├───────"
 				+ "\n│ » Currently, the bot has %2 commands that can be used"
 				+ "\n│ » Type %3help <command name> to view the details of how to use that command"
 				+ "\n│ %4"
@@ -255,8 +255,8 @@ module.exports = {
 				}
 				arrayInfo.sort((a, b) => (a.category < b.category ? -1 : 1));
 				arrayInfo.forEach((data, index) => {
-					const categoryUpcase = `${index == 0 ? `╭` : `├`}─── ${data.category.toUpperCase()} ${index == 0 ? "⭓" : "⭔"}`;
-					data.names = data.names.sort().map(item => item = `│ ${item}`);
+					const categoryUpcase = `${index == 0 ? `╭` : `├`}─── ${data.category.toUpperCase()} ${index == 0 ? "─── " : "─── "}`;
+					data.names = data.names.sort().map(item => item = `● ${item}`);
 					msg += `${categoryUpcase}\n${data.names.join("\n")}\n`;
 				});
 				message.reply(getLang("help2", msg, commands.size, prefix, doNotDelete));
@@ -406,4 +406,4 @@ function cropContent(content, max) {
 		content = content + "...";
 	}
 	return content;
-			}
+}
