@@ -3,7 +3,7 @@ module.exports = {
     name: "setimage",
     aliases: ["setimg"],
     version: "1.0",
-    author: "Tawsif",
+    author: "asta ichiyukimøri",
     role: 2,
     shortDescription: "Changes the group image",
     longDescription: "Changes the group image",
