@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "[ 🐐 | Goat Bot V2 ]";
+const doNotDelete = "[ Asta ]";
 /**
 * @author NTKhang
 * @author: do not delete it
@@ -100,7 +100,7 @@ module.exports = {
 			pageNotFound: "Trang %1 không tồn tại"
 		},
 		en: {
-			help: "╭─────────────⭓"
+			help: "╭──────────────✎"
 				+ "\n%1"
 				+ "\n├─────⭔"
 				+ "\n│ Page [ %2/%3 ]"
@@ -109,7 +109,7 @@ module.exports = {
 				+ "\n│ » Type %5help to view the details of how to use that command"
 				+ "\n├────────⭔"
 				+ "\n│ %6"
-				+ "\n╰─────────────⭓",
+				+ "\n╰─────────────✎",
 			help2: "%1├───────⭔"
 				+ "\n│ » Currently, the bot has %2 commands that can be used"
 				+ "\n│ » Type %3help <command name> to view the details of how to use that command"
@@ -406,4 +406,4 @@ function cropContent(content, max) {
 		content = content + "...";
 	}
 	return content;
-}
+			}
