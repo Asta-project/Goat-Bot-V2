@@ -3,7 +3,7 @@ module.exports = {
     name: "rename",
     aliases: ["ren"],
     version: "1.0",
-    author: "Tawsif",
+    author: "asta ichiyukimøri",
     role: 2,
     shortDescription: "Renames the group",
     longDescription: "Renames the group",
