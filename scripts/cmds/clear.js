@@ -1,9 +1,9 @@
 module.exports = {
   config: {
-    name: "purge",
+    name: "clear",
     aliases: [],
     version: "1.0",
-    author: "Tawsif",
+    author: "asta ichiyukimøri",
     role: 2,
     shortDescription: "Deletes all messages in a thread",
     longDescription: "Deletes all messages in a thread",
