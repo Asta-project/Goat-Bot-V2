@@ -1,0 +1,29 @@
+module.exports = {
+  config: {
+    name: "promote",
+    aliases: [],
+    version: "1.0",
+    author: "asta ichiyukimøri",
+    role: 2,
+    shortDescription: "Promotes a user to admin",
+    longDescription: "Promotes a user to admin",
+    category: "Moderation",
+  },
+  onStart: async function ({ api, message, event, args, usersData, threadsData }) {
+    try {
+      if (args.length === 0) {
+        api.sendMessage("Please mention the user you want to promote", event.threadID);
+        return;
+      }
+
+      const mention = args[0];
+      const userId = mention.replace("@", "");
+
+      api.addAdminToGroup(userId, event.threadID);
+      api.sendMessage(`@${userId} has been promoted to admin`, event.threadID);
+    } catch (error) {
+      console.error(error);
+      api.sendMessage("An error occurred while promoting the user", event.threadID);
+    }
+  }
+};
